@@ -29,7 +29,7 @@ spec:
       port: 80 
       targetPort: 80 
 ---
-aapiVersion: apps/v1
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql
