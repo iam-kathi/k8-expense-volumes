@@ -52,9 +52,6 @@ spec:
       containers:
       - name: mysql
         image: bharathkumarkathi225/mysql:v1
-        securityContext:
-          runAsUser: 1000
-          fsGroup: 1000
         volumeMounts:
         - name: mysql-volume
           mountPath: /var/lib/mysql
