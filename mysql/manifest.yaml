@@ -49,12 +49,9 @@ spec:
         component: mysql
         tier: db
     spec:
-      securityContext:
-        fsGroup: 27
-        runAsUser: 27
       containers:
       - name: mysql
-        image: bharathkumarkathi225/mysql:v1
+        image: joindevops/mysql:v1
         volumeMounts:
         - name: mysql-volume
           mountPath: /var/lib/mysql
