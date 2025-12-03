@@ -49,13 +49,16 @@ spec:
         component: mysql
         tier: db
     spec:
+      securityContext:
+        fsGroup: 27
+        runAsUser: 27
       containers:
       - name: mysql
         image: bharathkumarkathi225/mysql:v1
         volumeMounts:
         - name: mysql-volume
           mountPath: /var/lib/mysql
-#This is PVC definition, directly mentioned here  
+        #This is PVC definition, directly mentioned here  
   volumeClaimTemplates:
   - metadata:
       name: mysql-volume
